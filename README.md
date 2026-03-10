@@ -1,4 +1,5 @@
 # Image Caption extension for Stable Diffusion Webui 👁️📜🖋️
+[[paper]](paper.pdf)
 
 A stable-diffusion-webui extension for image caption generation.
 
