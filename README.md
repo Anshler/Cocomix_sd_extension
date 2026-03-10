@@ -1,9 +1,13 @@
 # Image Caption extension for Stable Diffusion Webui 👁️📜🖋️
 [[paper]](paper.pdf)
 
-The project explores integrating Large Concept Models into image captioning, achieving improved semantic fidelity and generalization over traditional GPT-2 baselines. The extension enables practical deployment of these models for dataset creation and real-world use in Stable Diffusion WebUI.
+The project explores integrating [Large Concept Models](https://github.com/facebookresearch/RAM/tree/main/projects/cocomix) into image captioning, achieving improved semantic fidelity and generalization over traditional GPT-2 baselines. The extension enables practical deployment of these models for dataset creation and real-world use in Stable Diffusion WebUI.
 
-<img src="Screenshot.png" alt="GitHub Logo" style="width: 100%;">
+<img src="scripts/Cocomix.png" alt="Cocomix architecture" style="width: 100%;">
+
+## Interface
+
+<img src="scripts/Screenshot.png" alt="Extension UI" style="width: 100%;">
 
 ## Results
 
