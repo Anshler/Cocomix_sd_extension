@@ -3,7 +3,7 @@ from collections import OrderedDict
 from safetensors.torch import load_file
 from types import SimpleNamespace
 
-from scripts.modeling_gpt2_cocomix import GPT2CoCoMixLMHeadModel
+from scripts.model.modeling_gpt2_cocomix import GPT2CoCoMixLMHeadModel
 
 def merge_dicts(base, override):
     for key, value in override.items():

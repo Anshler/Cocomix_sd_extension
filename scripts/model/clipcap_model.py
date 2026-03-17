@@ -3,7 +3,7 @@ import torch.nn as nn
 from torch.nn import functional as nnf
 from typing import Optional
 
-from scripts.clipcap_utils import get_base_lm
+from scripts.util.clipcap_utils import get_base_lm
 
 class MlpTransformer(nn.Module):
     def __init__(self, in_dim, h_dim, out_d: Optional[int] = None, act=nnf.relu, dropout=0.):
