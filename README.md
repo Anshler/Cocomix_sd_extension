@@ -9,6 +9,10 @@ The project explores integrating [Large Concept Models](https://github.com/faceb
 
 <img src="img/Screenshot.png" alt="Extension UI" style="width: 100%;">
 
+## Installation
+
+Require A1111 WebUI, paste the git link to install this extension
+
 ## Results
 
 Frozen LM setting
@@ -54,6 +58,12 @@ javascript/
 
 Config is loaded by merging `config.yaml` (shared base) with the model-specific YAML, converted to a `SimpleNamespace` via `dict_to_obj`.
 
-## Installation
+### Training
 
-Require A1111 WebUI, paste the git link to install this extension
+Use the Notebook [FSB_Capstone_ClipCap.ipynb](scripts/train/FSB_Capstone_ClipCap.ipynb)
+
+It can be run on Google Colab. Replace all the folder name with your actual folders, else it won't work.
+
+Important note: The code is for training the image captioner from scratch, if you want to finetune the current model, try modify the code yourself.
+
+I used a custom GPT model, training from [cocomix repo](https://github.com/facebookresearch/RAM/tree/main/projects/cocomix), you can just use the normal gpt-2 or anything else.
