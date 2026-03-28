@@ -67,3 +67,16 @@ It can be run on Google Colab. Replace all the folder name with your actual fold
 Important note: The code is for training the image captioner from scratch, if you want to finetune the current model, try modify the code yourself.
 
 I used a custom GPT model, training from [cocomix repo](https://github.com/facebookresearch/RAM/tree/main/projects/cocomix), you can just use the normal gpt-2 or anything else.
+
+### Citation
+
+```bibtex
+@misc{huynh2026evaluating,
+  author       = {Minh Huynh, T.},
+  title        = {Evaluating Methods For Applying Large Concept Model To Image Captioning},
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.19276839},
+  url          = {https://doi.org/10.5281/zenodo.19276839}
+}
+```
