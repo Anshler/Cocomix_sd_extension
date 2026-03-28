@@ -2,7 +2,7 @@
 
 The project explores integrating [Large Concept Models](https://github.com/facebookresearch/RAM/tree/main/projects/cocomix) into image captioning, achieving improved semantic fidelity and generalization over traditional GPT-2 baselines. The extension enables practical deployment of these models for dataset creation and real-world use in Stable Diffusion WebUI.
 
-This extension implements the model from this repo [Cocomix_sd_extension](https://github.com/Anshler/Cocomix_sd_extension)
+This extension implements the model from this repo [Cocomix-img-caption](https://github.com/Anshler/Cocomix-img-caption)
 
 ## Interface
 
