@@ -1,9 +1,8 @@
 # Image Caption extension for Stable Diffusion Webui 👁️📜🖋️
-[[paper]](paper.pdf)
 
 The project explores integrating [Large Concept Models](https://github.com/facebookresearch/RAM/tree/main/projects/cocomix) into image captioning, achieving improved semantic fidelity and generalization over traditional GPT-2 baselines. The extension enables practical deployment of these models for dataset creation and real-world use in Stable Diffusion WebUI.
 
-<img src="img/Cocomix.png" alt="Cocomix architecture" style="width: 100%;">
+This extension implements the model from this repo [Cocomix_sd_extension](https://github.com/Anshler/Cocomix_sd_extension)
 
 ## Interface
 
@@ -12,18 +11,6 @@ The project explores integrating [Large Concept Models](https://github.com/faceb
 ## Installation
 
 Require A1111 WebUI, paste the git link to install this extension
-
-## Results
-
-Frozen LM setting
-
-| Model         | BLEU-1 | BLEU-2 | BLEU-3 | BLEU-4 | METEOR | ROUGE | CIDEr | BERTScore |
-|--------------|--------|--------|--------|--------|--------|-------|-------|-----------|
-| GPT-2        | 0.5245 | 0.3516 | 0.2285 | 0.1460 | 0.1961 | 0.4844 | 0.4384 | 0.8922 |
-| Cocomix      | 0.5847 | 0.4016 | 0.2647 | 0.1737 | 0.2033 | 0.4982 | 0.4660 | 0.8953 |
-| Cocomix+PCE  | 0.6221 | 0.4267 | 0.2822 | 0.1841 | 0.2052 | 0.5060 | 0.4587 | 0.8967 |
-
-Cocomix+PCE achieves the best results in the frozen language model setting, demonstrating the benefit of Prefix Concept Extraction for semantic alignment and caption quality.
 
 ## Code structure
 
@@ -57,26 +44,3 @@ javascript/
 - **NTP** (Next-Token Prediction): plain `GPT2LMHeadModel` baseline. Configured via `gpt2_69m_ntp.yaml`. Uses `sdpa` attention.
 
 Config is loaded by merging `config.yaml` (shared base) with the model-specific YAML, converted to a `SimpleNamespace` via `dict_to_obj`.
-
-### Training
-
-Use the Notebook [FSB_Capstone_ClipCap.ipynb](scripts/train/FSB_Capstone_ClipCap.ipynb)
-
-It can be run on Google Colab. Replace all the folder name with your actual folders, else it won't work.
-
-Important note: The code is for training the image captioner from scratch, if you want to finetune the current model, try modify the code yourself.
-
-I used a custom GPT model, training from [cocomix repo](https://github.com/facebookresearch/RAM/tree/main/projects/cocomix), you can just use the normal gpt-2 or anything else.
-
-### Citation
-
-```bibtex
-@misc{huynh2026evaluating,
-  author       = {Minh Huynh, T.},
-  title        = {Evaluating Methods For Applying Large Concept Model To Image Captioning},
-  year         = {2026},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.19276839},
-  url          = {https://doi.org/10.5281/zenodo.19276839}
-}
-```
